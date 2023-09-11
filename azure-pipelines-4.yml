@@ -22,7 +22,7 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 - - task: JFrogGenericArtifacts@1
-  inputs:
+    inputs:
     command: 'Upload'
     connection: 'Azure-jfrog'
     specSource: 'taskConfiguration'
