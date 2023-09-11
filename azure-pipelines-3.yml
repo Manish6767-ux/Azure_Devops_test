@@ -20,3 +20,19 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: JFrogGenericArtifacts@1
+  inputs:
+    command: 'Upload'
+    connection: 'Azure-jfrog'
+    specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": "**/target/*",
+            "target": "demo_first-libs-snapshot"
+          }
+        ]
+      }
+    failNoOp: true
+
