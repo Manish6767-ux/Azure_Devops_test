@@ -26,5 +26,5 @@ steps:
     goals: 'install'
     artifactoryDeployService: 'Azure-jfrog'
     targetDeployReleaseRepo: 'demo_first-libs-release'
-    targetDeploySnapshotRepo: 'demo_first-libs-release'
+    targetDeploySnapshotRepo: 'demo_first-libs-snapshot'
     javaHomeOption: 'JDKVersion'
